@@ -19,13 +19,13 @@ const Hero = () => {
             variants={fadeIn("right","tween",0.2,1)} 
 
              className='primaryText'>
-                    Hay there,<br /> I am Smruti
+                    jjma conetnt
                 </motion.span>
                 <motion.span 
                 variants={fadeIn("left","tween",0.4,1)} 
                 className='secondaryText'>
-                    I design butifull simple <br/>
-                    I love What i do
+                
+                    love What we do
                 </motion.span>
             </div>
              {/* person image */}
@@ -34,7 +34,7 @@ const Hero = () => {
             className={css.person}>
                 <motion.img 
                 variants={slideIn("up","tween",0.5,1.3)} 
-                style={{width:'70%'}} src="person2.png" alt="person" />
+                style={{width:'70%'}} src="img/milk_bottle.png" alt="person" />
             </motion.div>
              {/* email */}
              <div className={css.email}>

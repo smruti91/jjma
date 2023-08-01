@@ -12,6 +12,7 @@ const Experties = () => {
       whileInView="show"
       viewport={{once:false, amount:0.25}}
     className={css.wrapper}>
+       <a className="anchor" id="experties"></a>
         <div className={` paddings yPaddings flexCenter innerWidth ${css.container}`}>
                   <div className={css.leftSide}>
                     {
@@ -33,7 +34,7 @@ const Experties = () => {
                     }
                   </div>
                   <motion.div variants={textVariant(0.5)} className={css.rightSide}>
-                    <span className="primaryText">What di i help ?</span><br></br>
+                    <span className="primaryText">What do I help ?</span><br></br>
                      {
                        WhatDoIHelp.map((para,i)=>{
                         return <span className="secondaryText" key={i}>{para}</span>

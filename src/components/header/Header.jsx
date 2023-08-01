@@ -1,13 +1,20 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import css from './Header.module.scss'
 import {BiMenuAltRight, BiPhoneCall} from 'react-icons/bi'
 import { motion } from 'framer-motion'
 import { getMenuStyles, headerVariants } from '../../utils/motion'
 import useHeaderShadow from '../../hooks/useHeaderShadow'
+import useOutsideAlerter from '../../hooks/useOutsideAlerter'
 
 const Header = () => {
     const [menuOpened, setMenuOpened] = useState(false);
     const headerShadow = useHeaderShadow();
+    const menuRef = useRef();
+
+    useOutsideAlerter({
+        menuRef,
+        setMenuOpened
+    })
 
   return (
     <motion.div
@@ -20,20 +27,45 @@ const Header = () => {
     >
         <div className={`flexCenter innerWidth ${css.container}`}>
             <div className={css.name}>
-                Smruti
+                JJMA
             </div>
-
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
             <ul 
+              ref={menuRef}
               style = {getMenuStyles(menuOpened)}
-            className={` flexCenter ${css.menu}`} >
-                <li> <a href="">Services</a> </li>
-                <li> <a href="">Experience</a> </li>
-                <li> <a href="">Portfolio</a> </li>
-                <li> <a href="">Testimonials</a> </li>
+              className={` flexCenter  ${css.menu}`} >
+                <li className='flexCenter'>  
+                    
+                    <a href="#experties">
+                    <img src="img/header-icn01.png" alt="product-icon" />
+                    <span>Products</span>
+                        </a> 
+                </li>
+                <li> 
+                  
+                    <a href="#work">
+                    <img src="img/header-icn02.png" alt="aboutUs-icon"/>
+                    <span>About Us</span>
+                        
+                    </a> 
+                    </li>
+                <li>  
+                    
+                    <a href="#portfolio">
+                    <img src="img/header-icn06.png" alt="contactUs-icon" />
+                    <span>Contact Us</span>
+                        
+                        
+                        </a> 
+                </li>
+                {/* <li> <a href="#people">Testimonials</a> </li>
                 <li className={`flexCenter ${css.phone}`} > 
                     <p>8249527287</p> 
                     <BiPhoneCall size={"40px"} />
-                </li>
+                </li> */}
             </ul>
             <div className={css.menuIcon} 
                onClick={()=>setMenuOpened((prev)=>!prev)}
