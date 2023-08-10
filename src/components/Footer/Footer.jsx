@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react' 
 import css from './Footer.module.scss';
 import { motion } from 'framer-motion';
 import { footerVariants, staggerChildren } from '../../utils/motion';
 
+import { AiOutlineFacebook, AiOutlineTwitter,AiOutlineInstagram,AiOutlineYoutube } from "react-icons/ai"
 const Footer = () => {
   return (
     
@@ -11,29 +12,22 @@ const Footer = () => {
     initial="hidden"
     whileInView="show"
     viewport={{once:false,amount:0.25}}
-    className={`paddings ${css.wrapper}`}>
-
+    className={`paddings ${css.wrapper}`}> 
+    <a className="anchor" id="footer"></a>
         <motion.div 
         variants={footerVariants}
-        className={`flexCenter innerWidth yPaddings ${css.container}`}>
+        className={`flexCenter ${css.container}`}>
             <div className={css.left}>
-                <span className="primaryText">
-                    Let's make something <br/> amazing together
-                </span>
-                <span className={`primaryText ${css.hi}`}>
-                   Start by <a href="mailto:sssmruti08@gmail.com">saying hi</a>
-                </span>
+            <p class="copyright-text mb-0">Copyright © 2023 JJMA | FPO - All Rights Reserved.
+
+            </p>
             </div>
             <div className={css.right}>
-              <div className={css.info}>
-                <span className="secondaryText">Information</span>
-                <p>688 Laxmisgar,Bhubaneswar ,Odisha</p>
-              </div>
               <div className={css.menu}>
-                <li>Services</li>
-                <li>Work</li>
-                <li>Notes</li>
-                <li>Employees</li>
+                <li><AiOutlineFacebook size={"30px"} /> </li>
+                <li><AiOutlineTwitter size={"30px"} /> </li>
+                <li><AiOutlineInstagram size={"30px"} /> </li>
+                <li><AiOutlineYoutube size={"30px"} /> </li>
               </div>
             </div>
         </motion.div>

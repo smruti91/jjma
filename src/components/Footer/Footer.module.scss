@@ -2,7 +2,7 @@
 
 .wrapper{
     background:white;
-
+    color: #1a3c8b;;
     .container{
         gap: 2rem;
         @media(max-width:$sm){
@@ -16,30 +16,18 @@
             >*{
                 display: block;
             }
-            .hi{
-                margin-top: 3rem;
-
-                a{
-                   text-decoration: underline;
-                    color: orange; 
-                }
-            }
+            
         }
         .right{
             // flex: 1;
-            .info{
-                margin-bottom: 1rem;
-                >*{
-                    display: block;
-                }
-            }
+           
             .menu{
                 @media(max-width:$sm){
                     flex-direction: row;
                     flex-wrap: wrap;
                 }
                 display: flex;
-                flex-direction: column;
+               // flex-direction: column;
                 gap: 2rem;
                 list-style: none;
                 li{

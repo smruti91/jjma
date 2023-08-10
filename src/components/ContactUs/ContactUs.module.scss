@@ -1,0 +1,89 @@
+@import '../../styles/contants.scss';
+
+.wrapper{
+    .container{
+        flex-direction: column; 
+        gap: 2rem;
+        
+        .reason{
+            @media(max-width:$sm){
+                width: 100%;
+           }
+           color: #1a3c8b;
+           width: 50%;
+        }
+        .experiences{
+            @media(max-width:$sm){
+                flex-direction: column;
+           }
+            display: flex;
+            width: 100%;
+           
+            gap:1.4rem;
+            position: relative;
+            justify-content: space-between;
+            .exp{
+                @media(max-width:$sm){
+                    margin-left: 0rem;
+               }
+                width: 100%;
+                justify-content: space-between;
+                // line-height: 40px;
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 1.2rem;
+                margin-left: 3rem;
+                background: #174888;
+                >div{
+                    flex: 1;
+                }
+                
+                .info{
+                   
+                    color: #fff;
+                    padding: 1rem;
+
+                    p{
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .progressbar{
+                @media(max-width:$sm){
+                    display: none;
+               }
+                position: absolute;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1.4rem;
+                left: 50%;
+
+                .line{
+                    position: absolute;
+                    height: 92%;
+                    width: 2px;
+                    background-image: linear-gradient(black 33%, rgba(255, 255, 255,0) 0%);
+                    background-position: right;
+                    background-size: 2px 30px;
+                    background-repeat:repeat-y;
+                    left: 48%;
+                    z-index: 1;
+                    border-radius: 5px;
+                }
+                >div{
+                    flex:1;
+                    padding-top: .8rem;
+                    z-index: 2;
+
+                    .circle{
+                        border-radius:50%;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                    }
+                }
+            }
+        }
+        
+    }
+}

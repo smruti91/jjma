@@ -6,7 +6,7 @@
 
 .innerWidth {
   @media (min-width: $xxl) {
-    max-width: 1280px;
+    max-width: 1880px;
     margin: auto;
   }
 
@@ -105,9 +105,9 @@
 
 .primaryText {
   @media (max-width: $sm) {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 

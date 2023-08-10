@@ -7,6 +7,8 @@
     position: sticky;
     top: 0;
     transition: all 300ms ease;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
 
     .container{
         position: relative;
@@ -30,7 +32,7 @@
                 font-weight: 500;
                 width: 50%;
                 min-width: 15rem;
-                background: white;
+                background: rgb(96, 96, 216);
                 border-radius: 2rem;
                 padding: 1rem;
                 transition: all 300ms ease;
@@ -49,7 +51,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    color:inherit;
+                    color:#fff;
                     text-decoration:none;
 
                     img{
@@ -63,7 +65,7 @@
                
 
                 &:hover{
-                    color:$secondary
+                    color:#8bff00;
                 }
             }
            .phone{
